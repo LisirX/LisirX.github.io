@@ -30,7 +30,7 @@
 <meta property="og:description" content="2022物竞复赛备战物竞！目标二等奖！ 九月十四记：还是不要好高骛远…好难啊waaaaa">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-09T04:02:57.000Z">
-<meta property="article:modified_time" content="2022-09-15T00:12:48.771Z">
+<meta property="article:modified_time" content="2022-09-16T12:24:33.219Z">
 <meta property="article:author" content="LisirX">
 <meta property="article:tag" content="物竞">
 <meta property="article:tag" content="物理">
@@ -208,7 +208,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-15 08:12:48" itemprop="dateModified" datetime="2022-09-15T08:12:48+08:00">2022-09-15</time>
+                <time title="修改时间：2022-09-16 20:24:33" itemprop="dateModified" datetime="2022-09-16T20:24:33+08:00">2022-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,14 +226,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>10k</span>
+              <span>16k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>10 分钟</span>
+              <span>15 分钟</span>
             </span>
 
         </div>
@@ -287,7 +287,7 @@ a=\cfrac{dv}{dt}=\cfrac{dv}{dx}\cdot \cfrac{dx}{dt}=\cfrac{dv}{dx}\cdot v</scrip
 <p>2.3 转动系考虑问题，需要求一个角加速度，运用对时间求导的结果等于对位移求导乘上速度的关系即可，代入受力即可。</p>
 <h4 id="T-15"><a href="#T-15" class="headerlink" title="T-15"></a>T-15</h4><p>设两个交点的横坐标，爆算得$\cfrac{dE_p}{d\theta }=0$，即</p>
 <script type="math/tex; mode=display">
-\cfrac{mg}{4a}(\cfrac{1}{cos^4(\theta )}-a^2l^2)sin2\theta =0</script><p>还要讨论$\theta $是否存在（$arccos(x)$的定义域问题）</p>
+\cfrac{mg}{4a}(\cfrac{1}{cos^4\theta }-a^2l^2)sin2\theta =0</script><p>还要讨论$\theta $是否存在（$arccos(x)$的定义域问题）</p>
 <p>还要讨论是否是稳定平衡。用一阶导数、二阶导数等等来判断函数的形状。一般考虑二阶导数即可，如果二阶导数不行再看下一阶。</p>
 <h4 id="T-16"><a href="#T-16" class="headerlink" title="T-16"></a>T-16</h4><p>注意第二小题中弹簧2有原长！！</p>
 <p>列出方程：</p>
@@ -318,9 +318,22 @@ a_{An}=\frac{v_A^2}{l}=\omega_0^2l</script><script type="math/tex; mode=display"
 <p>以下是沛神的答案：</p>
 <script type="math/tex; mode=display">
 \beta_{OA}= \cfrac{5\sqrt{3}}{9}\omega_0^2+\cfrac{g}{2l}</script><script type="math/tex; mode=display">
-\beta_{AB}=-\cfrac{4\sqrt{3}}{9}\omega_0^2+\cfrac{g}{2l}</script><h4 id="T-18"><a href="#T-18" class="headerlink" title="T-18"></a>T-18</h4><p>需要一段时间的沉淀，，这道题太牛皮了！未完待续</p>
-<!-- Todo -->
-<h4 id="T-1"><a href="#T-1" class="headerlink" title="T-1"></a>T-1</h4><p>这道题变相地把第一、二、三宇宙速度复习了一遍。主要是参考系的转换。最后一小题中，在摆脱了地球的引力后，算得剩余的航天器的速度（记得叠加地球参考系的速度），再让它在太阳系中的轨道能够到行星P即可。</p>
+\beta_{AB}=-\cfrac{4\sqrt{3}}{9}\omega_0^2+\cfrac{g}{2l}</script><h4 id="T-18"><a href="#T-18" class="headerlink" title="T-18"></a>T-18</h4>
+<p>一眼就知道这是一道积分的题目，取元段$d\theta$分析，有积分：</p>
+<script type="math/tex; mode=display">
+\int_{\frac{\pi}{6}}^{\frac{\pi}{2}}\frac{m}{L}gcos\theta R\cdot d\theta =\frac{3mg}{2\pi }</script><p>此处这样算的原因是内力可以忽略。但是第二小题要求最大张力，我们不得不考虑内力。</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+&dT+\frac{m}{L}gcos\theta R\cdot d\theta=dm\cdot a\\
+&a=\frac{3mg}{2\pi }\\
+&dm=\frac{m}{L}\cdot d\theta
+\end{aligned}
+\right.</script><p>显然$T$最大的必要条件是$dT=0$，算得$\theta$即可。然后求$T$需要在$\theta$处取元段分析即可。</p>
+<p>第三题和第一题算法一样，只是积分烦死。第四题取整体分析。</p>
+<p>第五题也是取元段分析，要求速度在当地的径向分量：</p>
+<script type="math/tex; mode=display">
+(\frac{dT}{dm}+g)sin\varphi=\frac{v^2}{R}</script><h4 id="T-1"><a href="#T-1" class="headerlink" title="T-1"></a>T-1</h4><p>这道题变相地把第一、二、三宇宙速度复习了一遍。主要是参考系的转换。最后一小题中，在摆脱了地球的引力后，算得剩余的航天器的速度（记得叠加地球参考系的速度），再让它在太阳系中的轨道能够到行星P即可。</p>
 <h4 id="T-2"><a href="#T-2" class="headerlink" title="T-2"></a>T-2</h4><p>觉得这道题甚好。</p>
 <p>首先第一小题需要求出木星对水星的引力。需要用到积分。</p>
 <p>图中绿色的是木星的匀质环，$S$是太阳所在的位置，$M$是水星，$J$是所取的木星微元。<br></p>
@@ -334,8 +347,22 @@ dF_{//}=\cfrac{GM_JM_md\theta }{2\pi R_J^2}\cdot \cfrac{cos\theta -\delta}{(1-2\
 \approx \cfrac{GM_JM_m\theta }{2\pi R_J^2}\cdot (cos\theta -\delta +3\delta cos^2\theta )</script><p>积分得：</p>
 <script type="math/tex; mode=display">
 \int_{0}^{2\pi }dF_{//}=\cfrac{GM_JM_mR_m}{2R_J^3}</script><h4 id="T-3"><a href="#T-3" class="headerlink" title="T-3"></a>T-3</h4><p>受力分析，搞清楚摩擦力方向后，简单的不要不要的。</p>
-<h4 id="T-5"><a href="#T-5" class="headerlink" title="T-5"></a>T-5</h4><p>沛神的角动量变化可真是太妙了。需要再做做。<strong>未完待续</strong></p>
-<!-- Todo -->
+<h4 id="T-5"><a href="#T-5" class="headerlink" title="T-5"></a>T-5</h4><script type="math/tex; mode=display">
+\begin{aligned}
+&\overrightarrow{M}=-\overrightarrow{r}\times k\overrightarrow{v} \\
+\Rightarrow\: &\frac{dL}{dt}=-k\frac{L}{m} \\
+\Rightarrow\: &\frac{dL}{L}=\frac{k}{m}dt \\
+\Rightarrow\: &ln\frac{L}{L_0}=-\frac{k}{m}t \\
+\Rightarrow\: &L=L_0e^{-\frac{k}{m}t} \\\\
+    &\left\{
+    \begin{aligned}
+    &\left|\overrightarrow{M}\right|=\left|-\overrightarrow{r}\times k\overrightarrow{v}\:\right|=k\frac{\pi ab}{2T} \\
+    &V_{面积速度}=\frac{\pi ab}{T}=\frac{\pi ab}{2\pi}\sqrt{\frac{GM}{a^3}}=\frac{|\overrightarrow{L}|}{2m}\\
+    &\frac{c}{a}=\frac{1}{2}\Rightarrow \frac{b}{a}=\frac{\sqrt{3}}{2}
+    \end{aligned}
+    \right.\\
+\Rightarrow\: &a=\frac{4L^2}{3GMm^2}=\frac{4L_0^2}{3GMm^2}e^{-\frac{2k}{m}t} \\
+\end{aligned}</script><p>当$e^{-\frac{2k}{m}t}=\cfrac{1}{2}$，解出$t$即可。</p>
 <h3 id="Part-2-热、光"><a href="#Part-2-热、光" class="headerlink" title="Part 2 热、光"></a>Part 2 热、光</h3><h4 id="热"><a href="#热" class="headerlink" title="热"></a>热</h4><p>几个重点</p>
 <ol>
 <li>对于任何一个过程$f(p,V)$，都可以有属于该过程的$C_{f(p,V)}=\cfrac{\Delta Q}{\Delta T}$</li>
@@ -428,7 +455,9 @@ S=\cfrac{1}{\mu_0}\overrightarrow{E}\cdot \overrightarrow{B} \\
 <p>做功就是围成的面积。</p>
 <p>另外，热机效率：$\eta=\cfrac{W_{对外}}{Q_吸}$，卡诺热机效率：$\eta=1-\cfrac{T_1}{T_2}$</p>
 <h4 id="T-7"><a href="#T-7" class="headerlink" title="T-7"></a>T-7</h4><p>望远镜成像：本题所述意为平行光入射，正好折射到目镜右端中心，再照射到目镜左端，出射光为平行光。所谓的视角放大率实际上就是物高和像高的比（视角，就是入射的一条平行于$x$轴的光线和出射的平行于$x$轴的光线的高度之差）。第三题要求入射平行光全部出射到眼睛里即可。</p>
-<h4 id="T-8"><a href="#T-8" class="headerlink" title="T-8"></a>T-8</h4><p>对于相对论的一些题目，抓住能量和动量守恒。</p>
+<h4 id="T-8"><a href="#T-8" class="headerlink" title="T-8"></a>T-8</h4><p>对于相对论的一些题目，抓住能量和动量守恒。理论上只需要把质量$m_0$代成相对论下的质量即可。第一题就是需要把能量守恒和$x$方向的动量守恒列出来即可。第二题，首先要有一种题感，就是这个运动$x$方向具有不变性，$y$方向具有对称性，而且总体能量守恒。考虑到在$x$轴附近电势能为$0$，所以速度只是变了个方向——和$x$轴对称。第三题，由于运动的对称性，只需要考虑半段过程中$x$方向的位移即可。</p>
+<p>做题感悟：需要找到特殊点，比如这道题的突破口就是当$z$达到最大值的时候。</p>
+<p>但是介于计算太复杂，所以未实现！</p>
 <p><strong>未完待续</strong></p>
 <!-- Todo -->
 <h2 id="真题卷"><a href="#真题卷" class="headerlink" title="真题卷"></a>真题卷</h2><h3 id="38届复赛错题回顾"><a href="#38届复赛错题回顾" class="headerlink" title="38届复赛错题回顾"></a>38届复赛错题回顾</h3><h4 id="第一题-1"><a href="#第一题-1" class="headerlink" title="第一题"></a>第一题</h4><p>要以$F$点为原点建立直角坐标系或极坐标系。因为后面的题与$F$点的关系最大（比如第二小题第二问，夹角$\theta$就是在$F$为原点的坐标系中的极角）。通过极坐标方程容易发现该曲线是双曲线。</p>
@@ -444,8 +473,131 @@ S=\cfrac{1}{\mu_0}\overrightarrow{E}\cdot \overrightarrow{B} \\
 <p>第二题需要用到公式：$p_{光子}=\cfrac{h}{\lambda }$。此处假设加速度不变。</p>
 <p>第三题需要用到光的多普勒效应。见<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94/115710">多普勒效应——百度百科</a>。</p>
 <p>第四题要根据匀减速速度的关系，算出此时需要的频率，让磁场去叠加即可。</p>
-<p><strong>未完待续</strong></p>
+<p>尚未计算，<strong>未完待续</strong></p>
 <!-- Todo -->
+<h4 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h4><p>第一小题纯送，用<em>Gauss</em>定理。第二小题纯送，用<em>Ampere</em>环路定理。</p>
+<p>接下来先介绍“正则动量”和“正则角动量”（参考<a target="_blank" rel="noopener" href="https://www.sohu.com/a/384550409_100116034）：">https://www.sohu.com/a/384550409_100116034）：</a></p>
+
+<p>Q1: 我们先来考虑一个粒子在磁场中运动的情形，磁场的方向垂直于纸面向下，磁场在轴<br>方向有平移对称性，一个带电粒子有质量$m$，电量为$q$，粒子具有速度$v_x$，$v_y$</p>
+<p>粒子的受力</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+F_x&=-qv_yB\\
+F_y&=qv_xB\\
+\end{aligned}
+\right.</script><p>列出动量守恒</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\left\{
+    \begin{aligned}
+    F_xdt&=mdv_x\\
+    F_ydt&=mdv_y\\
+    \end{aligned}
+\right.
+\Rightarrow
+\left\{
+    \begin{aligned}
+    mdv_x&=-qv_yBdt=-Bqdy\\
+    mdv_y&=qv_xBdt=Bqdx\\
+    \end{aligned}
+\right.\\\\
+\Rightarrow &
+\left\{
+    \begin{aligned}
+    mdv_x&=-Bqdy\\
+    mdv_y&=Bqdx\\
+    \end{aligned}
+\right.
+\Rightarrow
+\left\{
+    \begin{aligned}
+    d(mv_x+Bqy)&=0\\
+    d(mv_y-Bqx)&=0\\
+    \end{aligned}
+\right.\\\\
+\Rightarrow &
+\left\{
+    \begin{aligned}
+    mv_x+Bqy&=C_1\\
+    mv_y-Bqx&=C_2\\
+    \end{aligned}
+\right.
+\end{aligned}</script><p>我们现在得到了两个守恒量，这个就是一种正则动量，也是在竞赛中非常常用的守恒量。</p>
+<p>Q2: 我们现在假设上面的磁场沿轴方向长度为$d$，有一个粒子从磁场下端出发，有初速度$v_x$，$v_y$，求$h$</p>
+
+<p>由正则动量守恒得：</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{aligned}
+    mv_{x0}&=mv_{x1}+Bqd\\
+    mv_{y0}&=mv_{y1}-Bq(-h)\\
+    \end{aligned}
+\right.</script><p>由于洛伦兹力不做功，可得：</p>
+<script type="math/tex; mode=display">
+\frac{1}{2}m(v_{x0}^2+v_{y0}^2)=\frac{1}{2}m(v_{x1}^2+v_{y1}^2)\\</script><p>解得：</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{aligned}
+    v_{x1}&=\frac{m v_{x0}-B d q}{m}\\
+    v_{y1}&=-\frac{\sqrt{-B^2 d^2 q^2+2 B d m q v_{x0}+m^2 v_{y0}^2}}{m}\\
+    h&=\frac{\sqrt{-B^2 d^2 q^2+2 B d m q v_{x0}+m^2 v_{y0}^2}+m v_{y0}}{B q}
+    \end{aligned}
+\right.</script><p>或</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{aligned}
+    v_{x1}&=\frac{m v_{x0}-B d q}{m}\\
+    v_{y1}&=\frac{\sqrt{-B^2 d^2 q^2+2 B d m q v_{x0}+m^2 v_{y0}^2}}{m}\\
+    h&=\frac{-\sqrt{-B^2 d^2 q^2+2 B d m q v_{x0}+m^2 v_{y0}^2} + m v_{y0}}{B q}
+    \end{aligned}
+\right.</script><p>由题意得，$h&lt;0$，所以舍掉第一个结果。</p>
+<p>Q3: 我们有一个圆形的磁场，磁场的方向垂直于纸面向下，磁场有旋转对称性。一个带电粒子有质量$m$，电量为$q$。</p>
+
+<p>我们有：</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+F_\theta &=qv_rB\\
+F_r&=-qv_\theta B\\
+\end{aligned}
+\right.</script><p>列出角动量定理：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&F_\theta rdt=dL=d(mrv_\theta )\\
+\Rightarrow \:&qBv_rrdt=d(mrv_\theta )\\
+\Rightarrow \:&qBrdr=d(mrv_\theta )\\
+\Rightarrow \:&d(\frac{1}{2}qBr^2 - mrv_\theta)=0\\
+\Rightarrow \:&\frac{1}{2}qBr^2 - mrv_\theta=C'
+\end{aligned}</script><p>我们又得到了一个守恒量，这个便是正则角动量，在竞赛中也是十分常用的守恒量。</p>
+<p>Q4: 我们来考虑这样一个问题．一个实心圆柱形导体和一个中空的圆柱形导体共轴放置，其间为真空，内柱半径为$a$，外柱半径为$b$，外层电势比内层高$V$，有匀强磁场$B$，平行于轴， 指向纸面外。</p>
+
+<p>（1）加入一个电子（假设它到不了外侧），离轴心最远为$r_m$。试求到达这个距离时电子的速率$v$和这个距离的关系。<br>（2）我们增加$B$到一个值$B_c$，使得从内柱表面无初速度逸出的电子刚好不能到达外柱。求$B_c$。</p>
+<p><em>这两道小题实际上和38届这道题类似了，先不进行解答了。</em></p>
+<p><strong>正则动量和正则角动量产生的由来</strong></p>
+<p>这里，我们通过两道简单的例题，为大家讲述了在竞赛中常用的正则动量和正则角动量的用法以及概念。值得一提的是：正则动量和正则角动量<strong>均为对称性的结果</strong>。</p>
+<p>在第一题中，体系沿x轴有<strong>平移对称性</strong>，故产生了正则动量守恒。在第二题中，体系具有绕着中心轴的旋转对称性，所以产生了正则角动量守恒。</p>
+<p>在这两道题中，粒子的受力都不是耗散力，所以我们有整个物理过程是<strong>具有时间反演对称性</strong>的，于是我们有了整个过程的能量守恒。</p>
+<p>用一句话来总结就是：<strong>对称性产生守恒量！</strong></p>
+<p>现在解答38届这道题，只需要注意这里并不是匀强电场，以及洛伦兹力不做功即可，算电势能需要积分。这里就是用到了正则角动量和能量守恒，让粒子到达边缘后，$r$方向的速度大于$0$即可，也就是通过正则角动量守恒算出到达边界时候的$v_\varphi$，再使用能量守恒。</p>
+<p>第四小题，考虑两个筒共同产生的磁场，用法拉第电磁感应定理。</p>
+<h4 id="第七题和第八题"><a href="#第七题和第八题" class="headerlink" title="第七题和第八题"></a>第七题和第八题</h4><p>实际上这两题是连在一起的。第八题就是第七题$\theta=0$的情况。</p>
+<p>第七题第一小题可以整体分析，取质心为转轴。</p>
+<p>第二小题，分别设前后轮的地面摩擦力等于$F_x$和$F_y$，用前后轮的转动定律和整体的质心运动定律即可。第三题带数据。</p>
+<p>第八题在解决第七题之后，实际上是简单的。但是此处我认为答案不妥，所受力矩应当还要乘上一个三角函数，不知道此处是怎么想的，根据题意好像是取了最大值计算。</p>
+<h3 id="37届复赛错题回顾"><a href="#37届复赛错题回顾" class="headerlink" title="37届复赛错题回顾"></a>37届复赛错题回顾</h3><h4 id="第一题-2"><a href="#第一题-2" class="headerlink" title="第一题"></a>第一题</h4><p>要了解$pV^n=C$，$n$与这个过程有关。还要牢记$C_p=C_V+R$</p>
+<h4 id="第三题-2"><a href="#第三题-2" class="headerlink" title="第三题"></a>第三题</h4><p>对左边环路，有环路压降为$0$，可以“轻松”待定系数算出$i(t)$，还能轻松搞出下面两题。注意：第二题谐振的意思是没有能量损耗。</p>
+<h4 id="第四题-2"><a href="#第四题-2" class="headerlink" title="第四题"></a>第四题</h4><p>一道典型的相对论。相对论的题目突破口就是动量守恒、角动量守恒和能量守恒。</p>
+<p>稳定时，质子在轨道的最外缘做匀速圆周运动。我们有：</p>
+<script type="math/tex; mode=display">
+\overrightarrow{F}=\cfrac{d\overrightarrow{p}}{dt}\Rightarrow qv\times B=\cfrac{d\overrightarrow{p}}{dt}</script><p>实际上因为速度不变，质量不变，</p>
+<script type="math/tex; mode=display">
+d\overrightarrow{p}=\gamma md\overrightarrow{v}=\gamma m\cdot \cfrac{|\overrightarrow{v}|^2}{r}\cdot (-\hat{r})\cdot dt</script><p>考虑大小，</p>
+<script type="math/tex; mode=display">
+qvB=\gamma m\cdot \cfrac{v^2}{r}\Rightarrow B=\gamma m\cdot \cfrac{2\pi v^2}{Lqv}</script><p>因为知道$E_{max}=\sqrt{m^2c^4+p^2v^2}$，$p=\gamma mv$，代入算得</p>
+<script type="math/tex; mode=display">
+B=3.25419T</script>
+<p>第二小题，要用到零动量系。</p>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="偏振光"><a href="#偏振光" class="headerlink" title="偏振光"></a>偏振光</h3><p>首先要知道光波的传播是电磁波的传播，电场强度$\overrightarrow{E}$和磁感应强度$\overrightarrow{B}$都与光的传播方向（用波矢$\overrightarrow{k}$表示）垂直。因为磁场分量的传播不能引起大多数介质磁性的变化，即$\mu_r=1$，所以只需要考虑其电矢量$E$，光波的电矢量通常被称为光矢量。这些光矢量的振幅方向沿着一个平面，方向各异，振幅各异。</p>
 <p>偏振片的作用：只允许一个方向的光矢量的光波传播。</p>
 <p>关于起偏和检偏，可以看这张图：</p>
@@ -461,13 +613,20 @@ P=\cfrac{I_{max}-I_{min}}{I_{max}+I_{min}}</script><p>偏振度$0\leqslant P\leq
 <script type="math/tex; mode=display">
 \Delta \varphi =+\cfrac{\pi }{2}, 右旋</script><script type="math/tex; mode=display">
 \Delta \varphi =-\cfrac{\pi }{2}, 左旋</script><p>对于<strong>椭圆偏振光</strong>，其实也可以类比李萨如图形，合成即可。</p>
-<p>对于波晶片和$\cfrac{1}{4}$波片和其他的一些干涉问题，尚未得到，<strong>未完待续</strong>！</p>
-<!-- Todo -->
+<p><strong>双折射晶体</strong>：当一束光波投射到晶体界面上，一般会产生两束折射光束，这种现象称为双折射。由于晶体材料各向异性，这两束折射光线的夹角大小与光波的传播方向以及偏振状态有关。产生双折射现象的晶体叫做双折射晶体。双折射晶体的作用类似于两个透振方向互相垂直的起偏器。当光线穿过某些晶体（如方解石、铌酸锂、钽酸锂等）时，会折射成两束光。其中一束符合一般折射定律称之为寻常光（简称$o$光），折射率以$n_o$表示；而另一束的折射率随入射角不同而改变，称为非常光（简称$e$光），折射率以$n_e$表示。一般讲晶体中总有一个或二个方向，当光在晶体中沿此方向传播时，不发生双折射现象，把这个方向叫做晶体的光轴方向。只有一个光轴的称为单轴晶体，有两个光轴方向的称为双轴晶体。由晶体光轴和光线所决定的平面称为晶体的主截面。实验发现，$o$光和$e$光都是线偏振光，但它们的光矢量（一般指电场矢量$E$）的振动方向不同，$o$光的光矢量振动方向垂直于晶体的主截面，$e$光的光矢量振动方向平行于晶体的主截面。晶体的光轴在入射面内时，$o$光和$e$光的主截面重合，电光矢量的振动方向互相垂直。（参考<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8F%8C%E6%8A%98%E5%B0%84%E6%99%B6%E4%BD%93/5107200）">https://baike.baidu.com/item/%E5%8F%8C%E6%8A%98%E5%B0%84%E6%99%B6%E4%BD%93/5107200）</a></p>
+<p>而所谓的<strong>$\cfrac{1}{4}$波片</strong>，是双折射晶体的一种，能让波在两个不同方向（正交的轴）上传播的时候，传播速度不一样（是由于两个方向的轴折射率不一样导致的。折射率小的轴速度大，那个轴称为快轴；另一个方向的轴折射率大，速度小，被称为慢轴。注意这里如果知道了两个方向折射率大小，根据波片的宽度可以算出两个方向的光的相位差），导致线偏振光如果传播方向和和波片的两个正交方向成一个角度时，其中一个方向的光会比另一个方向的光延缓一些相位，导致其产生了相位差，变成了其他光。如果相位正好是$\cfrac{\pi}{2}$，且和快慢轴的夹角是$45\degree$时，则称为$\cfrac{1}{4}$波片，此时出射的光变成了圆偏振光。</p>
+<p><strong>$\cfrac{1}{2}$波片</strong>也不难理解了。</p>
+<p>对于做题来说，可以分解光到两个方向，再写出波方程，暴力求解即可。当然也可以直接画图，觉得甚妙。</p>
+<p>接下来讲偏振光的干涉。自然光先通过偏振片得到线偏振光，再通过等厚波晶片得到椭圆偏振光，再经过偏振片把椭圆偏振光的两个不同相位的分量弄到一个方向上去干涉。 </p>
+<p>如果使用不等厚波晶片，要使用折射率来计算光程差来计算干涉条纹的间距等等物理量。</p>
 <h3 id="相对论"><a href="#相对论" class="headerlink" title="相对论"></a>相对论</h3><p><strong>未完待续</strong>！</p>
 <!-- Todo -->
 <h3 id="大学物理-の-机械波"><a href="#大学物理-の-机械波" class="headerlink" title="大学物理 の 机械波"></a>大学物理 の 机械波</h3><p><strong>未完待续</strong>！</p>
 <!-- Todo -->
-<h3 id="有心力场"><a href="#有心力场" class="headerlink" title="有心力场"></a>有心力场</h3><p><strong>未完待续</strong>！</p>
+<h3 id="有心力场"><a href="#有心力场" class="headerlink" title="有心力场"></a>有心力场</h3><p>参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/435718099">https://zhuanlan.zhihu.com/p/435718099</a></p>
+<p><strong>未完待续</strong>！</p>
+<!-- Todo -->
+<h2 id="交变电流"><a href="#交变电流" class="headerlink" title="交变电流"></a>交变电流</h2><p><strong>未完待续</strong>！（想知道视在功率）</p>
 <!-- Todo -->
 
     </div>
@@ -572,7 +731,7 @@ P=\cfrac{I_{max}-I_{min}}{I_{max}+I_{min}}</script><p>偏振度$0\leqslant P\leq
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2022%E7%89%A9%E7%AB%9E%E5%A4%8D%E8%B5%9B"><span class="nav-number">1.</span> <span class="nav-text">2022物竞复赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E6%9E%84%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">机构题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-%E5%8A%9B%E5%AD%A6%E3%80%81%E5%8A%A8%E5%8A%9B%E5%AD%A6%EF%BC%88%EF%BC%9F"><span class="nav-number">1.1.1.</span> <span class="nav-text">Part 1 力学、动力学（？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">第四题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">第五题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-11"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">T-11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-12"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">T-12</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-13"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">T-13</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-14-%E8%BF%98%E9%9C%80%E8%A6%81%E5%86%8D%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">T-14 还需要再复习</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-15"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">T-15</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-16"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">T-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-17"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">T-17</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-18"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">T-18</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-1"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">T-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-2"><span class="nav-number">1.1.1.14.</span> <span class="nav-text">T-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-3"><span class="nav-number">1.1.1.15.</span> <span class="nav-text">T-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-5"><span class="nav-number">1.1.1.16.</span> <span class="nav-text">T-5</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-%E7%83%AD%E3%80%81%E5%85%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">Part 2 热、光</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%AD"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">热</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E5%85%AB%EF%BC%88%E5%BE%85%E7%BB%AD%EF%BC%89"><span class="nav-number">1.1.2.1.1.</span> <span class="nav-text">例题八（待续）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">光</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-3-%E7%94%B5%E7%A3%81%E5%AD%A6%E5%92%8C%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="nav-number">1.1.3.</span> <span class="nav-text">Part 3 电磁学和电动力学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%87%8D%E8%A6%81%E7%9A%84%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">一些重要的知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%81%B6%E6%9E%81%E5%AD%90%E6%BF%80%E5%8F%91%E7%9A%84%E7%94%B5%E5%9C%BA%E5%92%8C%E7%94%B5%E5%8A%BF"><span class="nav-number">1.1.3.1.1.</span> <span class="nav-text">电偶极子激发的电场和电势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E9%99%90%E5%A4%A7%E5%B8%A6%E7%94%B5%E7%9B%B4%E7%BA%BF%E6%BF%80%E5%8F%91%E7%9A%84%E7%94%B5%E5%9C%BA%E5%92%8C%E7%94%B5%E5%8A%BF"><span class="nav-number">1.1.3.1.2.</span> <span class="nav-text">无限大带电直线激发的电场和电势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AD%89%E5%8A%BF%E9%9D%A2%E5%92%8C%E7%94%B5%E5%9C%BA%E7%BA%BF"><span class="nav-number">1.1.3.1.3.</span> <span class="nav-text">等势面和电场线</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%AD%89%E5%8A%BF%E9%9D%A2"><span class="nav-number">1.1.3.1.3.1.</span> <span class="nav-text">等势面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%94%B5%E5%9C%BA%E7%BA%BF"><span class="nav-number">1.1.3.1.3.2.</span> <span class="nav-text">电场线</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%81%B6%E6%9E%81%E5%AD%90%E7%9A%84%E8%83%BD%E9%87%8F"><span class="nav-number">1.1.3.1.4.</span> <span class="nav-text">电偶极子的能量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%94%B5%E5%9C%BA%E7%9A%84%E8%83%BD%E9%87%8F%E5%AF%86%E5%BA%A6"><span class="nav-number">1.1.3.1.5.</span> <span class="nav-text">静电场的能量密度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%94%B5%E5%B9%B3%E8%A1%A1%E8%BE%B9%E7%95%8C%E5%85%B3%E7%B3%BB-amp-%E7%94%B5%E5%83%8F%E6%B3%95"><span class="nav-number">1.1.3.1.6.</span> <span class="nav-text">静电平衡边界关系 &amp; 电像法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9-amp-%E7%94%B5%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.1.3.1.7.</span> <span class="nav-text">电容 &amp; 电介质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%A3%81%E5%9C%BA"><span class="nav-number">1.1.3.1.8.</span> <span class="nav-text">静磁场</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.3.1.8.1.</span> <span class="nav-text">基本关系：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BE%B9%E5%80%BC%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.3.1.8.2.</span> <span class="nav-text">边值关系：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A3%81%E7%9F%A9"><span class="nav-number">1.1.3.1.9.</span> <span class="nav-text">磁矩</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BD%BD%E6%B5%81%E7%BA%BF%E5%9C%88%EF%BC%9A"><span class="nav-number">1.1.3.1.9.1.</span> <span class="nav-text">载流线圈：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%BF%80%E5%8F%91%E7%9A%84%E7%A3%81%E5%9C%BA%EF%BC%9A"><span class="nav-number">1.1.3.1.9.2.</span> <span class="nav-text">激发的磁场：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9C%A8%E5%8C%80%E5%BC%BA%E7%A3%81%E5%9C%BA%E7%9A%84%E5%8F%97%E5%8A%9B%EF%BC%9A"><span class="nav-number">1.1.3.1.9.3.</span> <span class="nav-text">在匀强磁场的受力：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9C%A8%E5%8C%80%E5%BC%BA%E7%A3%81%E5%9C%BA%E7%9A%84%E8%83%BD%E9%87%8F%EF%BC%9A"><span class="nav-number">1.1.3.1.9.4.</span> <span class="nav-text">在匀强磁场的能量：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8E%9F%E5%AD%90%E8%BD%A8%E9%81%93%E7%A3%81%E7%9F%A9%EF%BC%9A"><span class="nav-number">1.1.3.1.9.5.</span> <span class="nav-text">经典模型的原子轨道磁矩：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9C%9F%E7%A9%BA%E4%B8%AD%E7%9A%84%E7%94%B5%E7%A3%81%E6%B3%A2%E6%96%B9%E7%A8%8B"><span class="nav-number">1.1.3.1.10.</span> <span class="nav-text">真空中的电磁波方程</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E6%9E%84%E6%B5%8B%E8%AF%95"><span class="nav-number">1.2.</span> <span class="nav-text">机构测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Test-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">Test-2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#T-2-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">T-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-3-1"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">T-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-4"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">T-4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-5-1"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">T-5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-6"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">T-6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-7"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">T-7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-8"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">T-8</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E9%A2%98%E5%8D%B7"><span class="nav-number">1.3.</span> <span class="nav-text">真题卷</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#38%E5%B1%8A%E5%A4%8D%E8%B5%9B%E9%94%99%E9%A2%98%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.3.1.</span> <span class="nav-text">38届复赛错题回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98-1"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">第二题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98-1"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98-1"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">第四题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98-1"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">第五题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.4.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E6%8C%AF%E5%85%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">偏振光</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E8%AE%BA"><span class="nav-number">1.4.2.</span> <span class="nav-text">相对论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86-%E3%81%AE-%E6%9C%BA%E6%A2%B0%E6%B3%A2"><span class="nav-number">1.4.3.</span> <span class="nav-text">大学物理 の 机械波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA"><span class="nav-number">1.4.4.</span> <span class="nav-text">有心力场</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2022%E7%89%A9%E7%AB%9E%E5%A4%8D%E8%B5%9B"><span class="nav-number">1.</span> <span class="nav-text">2022物竞复赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E6%9E%84%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">机构题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-%E5%8A%9B%E5%AD%A6%E3%80%81%E5%8A%A8%E5%8A%9B%E5%AD%A6%EF%BC%88%EF%BC%9F"><span class="nav-number">1.1.1.</span> <span class="nav-text">Part 1 力学、动力学（？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">第四题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">第五题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-11"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">T-11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-12"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">T-12</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-13"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">T-13</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-14-%E8%BF%98%E9%9C%80%E8%A6%81%E5%86%8D%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">T-14 还需要再复习</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-15"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">T-15</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-16"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">T-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-17"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">T-17</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-18"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">T-18</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-1"><span class="nav-number">1.1.1.13.</span> <span class="nav-text">T-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-2"><span class="nav-number">1.1.1.14.</span> <span class="nav-text">T-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-3"><span class="nav-number">1.1.1.15.</span> <span class="nav-text">T-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-5"><span class="nav-number">1.1.1.16.</span> <span class="nav-text">T-5</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-%E7%83%AD%E3%80%81%E5%85%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">Part 2 热、光</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%AD"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">热</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E5%85%AB%EF%BC%88%E5%BE%85%E7%BB%AD%EF%BC%89"><span class="nav-number">1.1.2.1.1.</span> <span class="nav-text">例题八（待续）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">光</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-3-%E7%94%B5%E7%A3%81%E5%AD%A6%E5%92%8C%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="nav-number">1.1.3.</span> <span class="nav-text">Part 3 电磁学和电动力学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%87%8D%E8%A6%81%E7%9A%84%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">一些重要的知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%81%B6%E6%9E%81%E5%AD%90%E6%BF%80%E5%8F%91%E7%9A%84%E7%94%B5%E5%9C%BA%E5%92%8C%E7%94%B5%E5%8A%BF"><span class="nav-number">1.1.3.1.1.</span> <span class="nav-text">电偶极子激发的电场和电势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E9%99%90%E5%A4%A7%E5%B8%A6%E7%94%B5%E7%9B%B4%E7%BA%BF%E6%BF%80%E5%8F%91%E7%9A%84%E7%94%B5%E5%9C%BA%E5%92%8C%E7%94%B5%E5%8A%BF"><span class="nav-number">1.1.3.1.2.</span> <span class="nav-text">无限大带电直线激发的电场和电势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AD%89%E5%8A%BF%E9%9D%A2%E5%92%8C%E7%94%B5%E5%9C%BA%E7%BA%BF"><span class="nav-number">1.1.3.1.3.</span> <span class="nav-text">等势面和电场线</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%AD%89%E5%8A%BF%E9%9D%A2"><span class="nav-number">1.1.3.1.3.1.</span> <span class="nav-text">等势面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%94%B5%E5%9C%BA%E7%BA%BF"><span class="nav-number">1.1.3.1.3.2.</span> <span class="nav-text">电场线</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%81%B6%E6%9E%81%E5%AD%90%E7%9A%84%E8%83%BD%E9%87%8F"><span class="nav-number">1.1.3.1.4.</span> <span class="nav-text">电偶极子的能量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%94%B5%E5%9C%BA%E7%9A%84%E8%83%BD%E9%87%8F%E5%AF%86%E5%BA%A6"><span class="nav-number">1.1.3.1.5.</span> <span class="nav-text">静电场的能量密度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%94%B5%E5%B9%B3%E8%A1%A1%E8%BE%B9%E7%95%8C%E5%85%B3%E7%B3%BB-amp-%E7%94%B5%E5%83%8F%E6%B3%95"><span class="nav-number">1.1.3.1.6.</span> <span class="nav-text">静电平衡边界关系 &amp; 电像法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E5%AE%B9-amp-%E7%94%B5%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.1.3.1.7.</span> <span class="nav-text">电容 &amp; 电介质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%A3%81%E5%9C%BA"><span class="nav-number">1.1.3.1.8.</span> <span class="nav-text">静磁场</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.3.1.8.1.</span> <span class="nav-text">基本关系：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BE%B9%E5%80%BC%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.3.1.8.2.</span> <span class="nav-text">边值关系：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A3%81%E7%9F%A9"><span class="nav-number">1.1.3.1.9.</span> <span class="nav-text">磁矩</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BD%BD%E6%B5%81%E7%BA%BF%E5%9C%88%EF%BC%9A"><span class="nav-number">1.1.3.1.9.1.</span> <span class="nav-text">载流线圈：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%BF%80%E5%8F%91%E7%9A%84%E7%A3%81%E5%9C%BA%EF%BC%9A"><span class="nav-number">1.1.3.1.9.2.</span> <span class="nav-text">激发的磁场：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9C%A8%E5%8C%80%E5%BC%BA%E7%A3%81%E5%9C%BA%E7%9A%84%E5%8F%97%E5%8A%9B%EF%BC%9A"><span class="nav-number">1.1.3.1.9.3.</span> <span class="nav-text">在匀强磁场的受力：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9C%A8%E5%8C%80%E5%BC%BA%E7%A3%81%E5%9C%BA%E7%9A%84%E8%83%BD%E9%87%8F%EF%BC%9A"><span class="nav-number">1.1.3.1.9.4.</span> <span class="nav-text">在匀强磁场的能量：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8E%9F%E5%AD%90%E8%BD%A8%E9%81%93%E7%A3%81%E7%9F%A9%EF%BC%9A"><span class="nav-number">1.1.3.1.9.5.</span> <span class="nav-text">经典模型的原子轨道磁矩：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9C%9F%E7%A9%BA%E4%B8%AD%E7%9A%84%E7%94%B5%E7%A3%81%E6%B3%A2%E6%96%B9%E7%A8%8B"><span class="nav-number">1.1.3.1.10.</span> <span class="nav-text">真空中的电磁波方程</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E6%9E%84%E6%B5%8B%E8%AF%95"><span class="nav-number">1.2.</span> <span class="nav-text">机构测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Test-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">Test-2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#T-2-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">T-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-3-1"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">T-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-4"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">T-4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-5-1"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">T-5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-6"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">T-6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-7"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">T-7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-8"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">T-8</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E9%A2%98%E5%8D%B7"><span class="nav-number">1.3.</span> <span class="nav-text">真题卷</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#38%E5%B1%8A%E5%A4%8D%E8%B5%9B%E9%94%99%E9%A2%98%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.3.1.</span> <span class="nav-text">38届复赛错题回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98-1"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">第二题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98-1"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98-1"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">第四题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98-1"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">第五题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E9%A2%98"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">第六题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E9%A2%98%E5%92%8C%E7%AC%AC%E5%85%AB%E9%A2%98"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">第七题和第八题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#37%E5%B1%8A%E5%A4%8D%E8%B5%9B%E9%94%99%E9%A2%98%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.3.2.</span> <span class="nav-text">37届复赛错题回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98-2"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98-2"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98-2"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">第四题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.4.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E6%8C%AF%E5%85%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">偏振光</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E8%AE%BA"><span class="nav-number">1.4.2.</span> <span class="nav-text">相对论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86-%E3%81%AE-%E6%9C%BA%E6%A2%B0%E6%B3%A2"><span class="nav-number">1.4.3.</span> <span class="nav-text">大学物理 の 机械波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA"><span class="nav-number">1.4.4.</span> <span class="nav-text">有心力场</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E5%8F%98%E7%94%B5%E6%B5%81"><span class="nav-number">1.5.</span> <span class="nav-text">交变电流</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -911,12 +1070,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">36 分钟</span>
 </div>
 
         
