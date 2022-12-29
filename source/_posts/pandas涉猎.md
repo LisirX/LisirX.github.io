@@ -33,7 +33,9 @@ pandas.Series(data, index, dtype, name, copy)
 | `name`  |                设置名称。                 |
 | `copy`  |         拷贝数据，默认为`False`。         |
 
-### 实例1
+### 实例1 - 从数组创建
+
+通过数组来创建`Series`
 
 代码：
 
@@ -53,7 +55,7 @@ print(myvar)
 dtype: int64
 ```
 
-### 实例2
+### 实例2 - 访问元素
 
 代码：
 
@@ -72,7 +74,7 @@ print(myvar[1])
 
 这说明在没有指定`index`的情况下，`Series`的默认下标为`0,1,2,...`
 
-### 实例3
+### 实例3 - 改变索引
 
 代码：
 
@@ -94,7 +96,7 @@ dtype: object
 
 可见我们可以指定`index`来改变默认索引
 
-### 实例4
+### 实例4 - 访问元素
 
 代码：
 
@@ -117,7 +119,7 @@ Runoob
 
 可见我们改变索引后，可以通过我们设定的索引来访问元素（和字典有异曲同工之妙），也可以用默认索引来访问元素，还可以直接用访问元素的方式（这个方法只适用于索引为字符串的时候）来访问。
 
-### 实例5
+### 实例5 - 索引值相同的访问
 
 代码：
 
@@ -144,7 +146,7 @@ dtype: object
 
 可见`Series`可以指定同样的索引值，并且在访问时如果一个索引对应着不同的元素，会返回所有查询到的元素组成的`Series`
 
-### 实例6
+### 实例6 - 指定数字为索引
 
 代码：
 
@@ -169,7 +171,7 @@ Google
 
 可见如果指定`index`为数字，会覆盖掉默认的从0开始的索引
 
-### 实例7
+### 实例7 - 索引值相同的访问
 
 代码：
 
@@ -196,7 +198,7 @@ dtype: object
 
 和实例5类似。
 
-### 实例8
+### 实例8 - 从字典创建
 
 代码：
 
@@ -227,9 +229,9 @@ x       NaN
 dtype: object
 ```
 
-可见我们也可以用字典来创建`Series`，并且可以指定索引。对于不存在的索引，会自动补上`NAN`
+可见我们也可以用字典来创建`Series`，并且可以指定索引。对于不存在的索引，会自动补上`NaN`
 
-### 实例9
+### 实例9 - 从数组创建不会出现`NaN`元素
 
 代码：
 
@@ -253,9 +255,9 @@ Traceback (most recent call last):
 ValueError: Length of values (4) does not match length of index (5)
 ```
 
-说明元素不存在的索引只可能在用字典创建时出现
+说明元素不存在（也即元素为`NaN`）的索引只可能在用字典创建时出现
 
-### 实例10
+### 实例10 - 切片操作
 
 代码：
 
@@ -315,9 +317,82 @@ dtype: object
 
 提供了几种访问方法
 
+### 其他的操作
+
+#### `Series.add()`
+
+```python
+import pandas as pd
+s = pd.Series([1,2,3])
+print(s)
+s = s.add(10)
+print(s)
+s = pd.Series(["a","b","c"])
+print(s)
+s = s.add("g")
+print(s)
+```
+
+```shell
+0    1
+1    2
+2    3
+dtype: int64
+0    11
+1    12
+2    13
+dtype: int64
+0    a
+1    b
+2    c
+dtype: object
+0    ag
+1    bg
+2    cg
+dtype: object
+```
+
+#### `index`和`value`
+
+```python
+import pandas as pd
+s = pd.Series(["a","b","c"])
+for i in s:
+    print(i)
+print()
+for i in s.values:
+    print(i)
+print()
+for i in s.index:
+    print(i)
+print()
+for i in s.index:
+    print(s[i])
+```
+
+```shell
+a
+b
+c
+
+a
+b
+c
+
+0
+1
+2
+
+a
+b
+c
+```
+
+
+
 ## DataFrame
 
-`DataFrame`是二维数据结构，它包含一组有序的列，每列可以是不同的数据类型，`DataFrame`既有行索引，也有列索引，它可以看作是`Series`组成的字典，不过这些`Series`共用一个索引。
+`DataFrame`是二维数据结构，它包含一组有序的列，每列可以是不同的数据类型，`DataFrame`既有行索引，也有列索引，它可以看作是`Series`组成的集合，不过这些`Series`共用一个索引。
 
 功能特点：
 
@@ -329,7 +404,7 @@ dtype: object
 `DataFrame`的结构如下：
 
 ```python
-pandas.DataFrame( data, index, columns, dtype, copy)
+pandas.DataFrame(data, index, columns, dtype, copy)
 ```
 
 构造函数的参数说明如下：
@@ -342,7 +417,7 @@ pandas.DataFrame( data, index, columns, dtype, copy)
 |  `dtype`  |                       每列的数据类型。                       |
 |  `copy`   |                是否复制数据，默认值为`False`                 |
 
-下面介绍如何创建数据帧(**DataFrame**)。
+下面介绍如何创建数据表格(**DataFrame**)。
 
 ### 创建一个空的 DataFrame
 
@@ -363,7 +438,7 @@ Index: []
 
 ### 从列表创建 DataFrame
 
-可以使用单个列表或二维列表创建数据帧(**DataFrame**)。
+可以使用单个列表或二维列表创建数据表格(**DataFrame**)。
 
 **例1**：单个列表创建DataFrame
 
@@ -447,7 +522,7 @@ print (df)
 
 > 注：观察值`0`,`1`,`2`,`3`，它们是分配给每个使用函数`range(n)`的默认索引。
 
-使用列表作为索引，创建一个数据帧(**DataFrame**)。
+使用列表作为索引，创建一个数据表格(**DataFrame**)。
 
 ```python
 import pandas as pd
@@ -470,9 +545,9 @@ rank4   42  Ricky
 
 ### 从字典列表创建 DataFrame
 
-`字典列表`可作为输入数据用来创建数据帧(**DataFrame**)，字典键默认为列名。
+`字典列表`可作为输入数据用来创建数据表格(**DataFrame**)，字典键默认为**列名**。
 
-**例1**：传递字典列表来创建数据帧(**DataFrame**)。
+**例1**：传递字典列表来创建数据表格(**DataFrame**)。
 
 ```python
 import pandas as pd
@@ -491,7 +566,7 @@ print (df)
 
 > 注：观察到，使用`NaN`填写空白区域
 
-**例2**：传递字典列表和行索引来创建数据帧(**DataFrame**)。
+**例2**：传递字典列表和行索引来创建数据表格(**DataFrame**)。
 
 ```python
 import pandas as pd
@@ -508,7 +583,7 @@ first   1   2   NaN
 second  5  10  20.0
 ```
 
-**例3**：以下示例显示如何使用字典，行索引和列索引列表创建数据帧(**DataFrame**)。
+**例3**：以下示例显示如何使用字典，行索引和列索引列表创建数据表格(**DataFrame**)。
 
 ```python
 import pandas as pd
@@ -565,7 +640,7 @@ d  NaN    4
 
 ### DataFrame 读取列
 
-下面将从数据帧(DataFrame)中读取一列。
+下面将从数据表格(DataFrame)中读取一列。
 
 ```python
 import pandas as pd
@@ -639,7 +714,9 @@ import pandas as pd
 
 d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']), 
      'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd']), 
-     'three' : pd.Series([10,20,30], index=['a','b','c'])}
+     'three' : pd.Series([10,20,30], index=['a', 'b', 'c']), 
+     'four' : pd.Series([50,60,70,80], index=['a', 'b', 'c', 'e'])}
+# 由此可以更加深刻地理解
 
 df = pd.DataFrame(d)
 print ("Our dataframe is:")
@@ -654,29 +731,53 @@ print (df)
 print ("Deleting another column using POP function:")
 df.pop('two')
 print (df)
+
+# using drop function
+print ("Deleting another column using DROP function:")
+df = df.drop(['three'], axis = 1)
+print (df)
+
+# using drop function
+print ("Deleting another column using DROP function:")
+df.drop(['four'], axis = 1, inplace = True)
+print (df)
 ```
 
 执行结果如下:
 
 ```shell
 Our dataframe is:
-   one  three  two
-a  1.0   10.0    1
-b  2.0   20.0    2
-c  3.0   30.0    3
-d  NaN    NaN    4
+   one  two  three  four
+a  1.0  1.0   10.0  50.0
+b  2.0  2.0   20.0  60.0
+c  3.0  3.0   30.0  70.0
+d  NaN  4.0    NaN   NaN
+e  NaN  NaN    NaN  80.0
 Deleting the first column using DEL function:
-   three  two
-a   10.0    1
-b   20.0    2
-c   30.0    3
-d    NaN    4
+   two  three  four
+a  1.0   10.0  50.0
+b  2.0   20.0  60.0
+c  3.0   30.0  70.0
+d  4.0    NaN   NaN
+e  NaN    NaN  80.0
 Deleting another column using POP function:
-   three
-a   10.0
-b   20.0
-c   30.0
-d    NaN
+   three  four
+a   10.0  50.0
+b   20.0  60.0
+c   30.0  70.0
+d    NaN   NaN
+e    NaN  80.0
+Deleting another column using DROP function:
+   four
+a  50.0
+b  60.0
+c  70.0
+d   NaN
+e  80.0
+Deleting another column using DROP function:
+Empty DataFrame
+Columns: []
+Index: [a, b, c, d, e]
 ```
 
 ### DataFrame 读取行
@@ -744,6 +845,65 @@ c  3.0    3
 d  NaN    4
 ```
 
+**读取行列交叉项**
+
+展示`iloc[]`的一些用法，`loc[]`同理。注意后面跟着的是`[]`不是`()`
+
+```python
+import pandas as pd
+data = [[1,2,3],[4,5,6],[7,8,9]]
+df = pd.DataFrame(data)
+print("# df: ")
+print(df)
+print("# df.iloc[:,0:2]: ")
+print(df.iloc[:,0:2])
+print("# df.iloc[1:2,0:2]: ")
+print(df.iloc[1:2,0:2])
+print("# df.iloc[:,1]: ")
+print(df.iloc[:,1])
+print("# df.iloc[1]: ")
+print(df.iloc[1])
+print("# df.iloc[1:2]: ")
+print(df.iloc[1:2])
+print("# df.iloc[[1,2],[0,1]]: ")
+print(df.iloc[[1,2],[0,1]])
+```
+
+执行结果如下:
+
+```shell
+# df: 
+   0  1  2
+0  1  2  3
+1  4  5  6
+2  7  8  9
+# df.iloc[:,0:2]: 
+   0  1
+0  1  2
+1  4  5
+2  7  8
+# df.iloc[1:2,0:2]: 
+   0  1
+1  4  5
+# df.iloc[:,1]: 
+0    2
+1    5
+2    8
+Name: 1, dtype: int64
+# df.iloc[1]: 
+0    4
+1    5
+2    6
+Name: 1, dtype: int64
+# df.iloc[1:2]: 
+   0  1  2
+1  4  5  6
+# df.iloc[[1,2],[0,1]]: 
+   0  1
+1  4  5
+2  7  8
+```
+
 ### DataFrame 添加行
 
 使用`append()`函数将新行添加到 DataFrame
@@ -796,7 +956,7 @@ print (df)
 
 > 在上面的例子中，一共有两行被删除，因为这两行包含相同的标签`0`。
 
-**DataFrame 基本属性和方法**，前面介绍了[创建DataFrame](https://geek-docs.com/pandas/pandas-tutorials/pandas-create-dataframe.html)和[DataFrame的基本用法](https://geek-docs.com/pandas/pandas-tutorials/pandas-dataframe-read-add-delete.html)，下面来看看数据帧(DataFrame)的基本功能有哪些？下表列出了DataFrame的重要属性和方法。
+**DataFrame 基本属性和方法**，前面介绍了[创建DataFrame](https://geek-docs.com/pandas/pandas-tutorials/pandas-create-dataframe.html)和[DataFrame的基本用法](https://geek-docs.com/pandas/pandas-tutorials/pandas-dataframe-read-add-delete.html)，下面来看看数据表格(DataFrame)的基本功能有哪些？下表列出了DataFrame的重要属性和方法。
 
 ![Pandas DataFrame 属性和方法](pandas%E6%B6%89%E7%8C%8E/201908302155.png)
 
@@ -829,6 +989,15 @@ Our data series is:
 4   30  Steve    3.20
 5   29  Minsu    4.60
 6   23   Jack    3.80
+```
+
+### 改行列标题
+
+```python
+df.columns = ['name','gender','age'] #尽管我们只想把’sex’改为’gender’，但是仍然要把所有的列全写上，否则报错。
+df.rename(columns = {'name':'Name','age':'Age'},inplace = True) #只修改name和age。inplace若为True，直接修改df，否则，不修改df，只是返回一个修改后的数据。
+df.index = list('abc')#把index改为a,b,c.直接修改了df。
+df.rename({1:'a',2:'b',3:'c'},axis = 0,inplace = True)#无返回值，直接修改df的index。
 ```
 
 ### shape 示例
@@ -1024,4 +1193,13 @@ The last two rows of the data frame is:
 6   23   Jack     3.8
 ```
 
-**未完待续...**
+### Tips
+
+1. `axis=0/1`来确定行列，默认`axis=0`表示不跨行操作，`axis=1`表示跨行操作，而且需要自行指定。一般这个参数用在`append()`, `drop()`函数中。
+2. 可以用`df.index`, `df.columns`, `df.values`查看`DataFrame`对象的行索引、列索引和数据。`df.values`实例见上文。
+3. 可以用`df.T`查看行列转置后的`DataFrame`
+4. `inplace=True`参数的说明: 用于`append()`和`drop()`函数，默认这个值为`False`表示不改变原有对象的值，修改原有对象值时需要对原有对象赋值（`df = df.drop("index1", axis=0)`）。设置为`True`后表示改变原有对象的值。
+5. `df.at['a', '列2']`表示取第a行列2所对应的元素。
+6. 注意: `df[2]`取列2，但是`df[2:4]`取行2~3。
+7. `ignore_index=True`参数的说明: **未完待续** 
+
